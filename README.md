@@ -1,45 +1,31 @@
-## Deploy JSON Server to Vercel
+# Restaurant API
 
-A template to deploy [JSON Server](https://github.com/typicode/json-server) to [Vercel](https://vercel.com), allow you to run fake REST API online!
+## Description
 
-Demo from this repository: 
+The Restaurant API is a web service that serves as a back-end for managing restaurant-related data such as menus, orders. It's built using Express.js, and JSON Server, a low-code REST API server.
 
-1. https://json-server-in.vercel.app
-2. https://json-server-in.vercel.app/api/posts
+## Features
 
-![Powered by Vercel](https://images.ctfassets.net/e5382hct74si/78Olo8EZRdUlcDUFQvnzG7/fa4cdb6dc04c40fceac194134788a0e2/1618983297-powered-by-vercel.svg)
+- **Menu Management**: Create, read, update, and delete menu items.
+- **Order Handling**: Receive and process customer food orders.
 
-### How to use
+## Usage
 
-1. Click "**Use this template**" or clone this repository.
-2. Update or use the default [`db.json`](./db.json) in the repository.
-3. Sign Up or login into [Vercel](https://vercel.com).
-4. From the Vercel dashboard, click "**+ New Project**" then "**Import**" your repository.
-5. In the "**Configure Project**" screen, leave everything default and click "**Deploy**".
-6. Wait until deployment is done, and your own JSON server is ready to serve!
+The API endpoints are accessible at [https://restaurantapi.vercel.app/](https://restaurantapi.vercel.app/). You can use tools like Postman or curl to send HTTP requests to the various API endpoints. Here are some example endpoints:
 
-## Default `db.json`
+- **Menu Items**:
+  - GET: [http://localhost:3000/menu](http://localhost:3000/menu)
 
-```json
-{
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
-}
-```
+- **Orders**:
+  - GET: [http://localhost:3000/orders](http://localhost:3000/orders)
+  - POST: [http://localhost:3000/orders](http://localhost:3000/orders)
 
-## Enable write operations
+## Technologies Used
 
-By default, only GET operation is allowed, thanks to the contribution by [@VicAv99](https://www.github.com/VicAv99) at [#6](https://github.com/kitloong/json-server-vercel/issues/6), we can now enable write operations as well.
+- [Express.js](https://expressjs.com/): A Node.js web application framework.
+- [JSON Server](https://github.com/typicode/json-server): A full fake REST API server.
+- [Node.js](https://nodejs.org/): A JavaScript runtime for server-side development.
 
-You can find the example code in [`api/server.js`](./api/server.js).
+## Contribution
 
-## Reference
-
-1. https://github.com/typicode/json-server
-2. https://vercel.com
-3. https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
+- Powered by [kitloong/json-server-vercel](https://github.com/kitloong/json-server-vercel)
